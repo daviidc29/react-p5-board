@@ -302,5 +302,5 @@
 ![alt text](image.png)
 
 ## Despliegue en:
-
+https://tablero-e7dxdsh7e0fjemaw.canadacentral-01.azurewebsites.net/index.html
 https://tablero-e7dxdsh7e0fjemaw.canadacentral-01.azurewebsites.net/board.html
