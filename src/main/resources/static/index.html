@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Introducción React + Spring</title>
+</head>
+<body style="font-family: system-ui, Arial, sans-serif; padding: 20px;">
+  <h1>Introducción de React y  Spring</h1>
+  <p>Ejemplos mínimos con React, JSX, Babel y un componente que consulta <code>/status</code>.</p>
+
+  <div style="margin:12px 0;">
+    <label>Nombre de sesión: </label>
+    <input id="nameInput" placeholder="Tu nombre"/>
+    <button onclick="setName()">Guardar</button>
+    <span id="saveMsg"></span>
+  </div>
+
+  <div id="root"></div>
+
+  <h2>Estado del servidor</h2>
+  <div id="status"></div>
+
+  <p>
+    Tablero colaborativo P5.js: <a href="/board.html">/board.html</a>
+  </p>
+
+  <script src="https://unpkg.com/react@16/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js" crossorigin></script>
+
+  <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+
+  <script>
+    function setName() {
+      const v = document.getElementById('nameInput').value || 'Anónimo';
+      fetch('/setname?name=' + encodeURIComponent(v))
+        .then(r => r.text())
+        .then(t => {
+          document.getElementById('saveMsg').textContent = ' → ' + t;
+        });
+    }
+  </script>
+
+  <script src="/js/FirstComponent.jsx" type="text/babel"></script>
+  <script src="/js/StatusComponent.jsx" type="text/babel"></script>
+</body>
+</html>

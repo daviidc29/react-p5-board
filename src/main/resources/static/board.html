@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tablero Colaborativo </title>
+  <link rel="stylesheet" href="/css/board.css"/>
+</head>
+<body>
+  <div class="bar">
+    <div class="left">
+      <strong>Tablero Compartido</strong>
+      <span id="userColor"></span>
+    </div>
+    <div class="right">
+      <label>Tamaño:</label>
+      <input id="size" type="range" min="4" max="32" value="12"/>
+      <button id="clearBtn">Borrar tablero para todos</button>
+      <a href="/index.html">Volver</a>
+    </div>
+  </div>
+  <main>
+    <div id="canvasWrapper"></div>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/p5.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.dom.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.1/addons/p5.sound.min.js"></script>
+  <script src="/js/sketch.js"></script>
+</body>
+</html>
