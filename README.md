@@ -300,3 +300,7 @@
 ## Ejemplo funcionamiento:
 
 ![alt text](image.png)
+
+## Despliegue en:
+
+tablero-e7dxdsh7e0fjemaw.canadacentral-01.azurewebsites.net
